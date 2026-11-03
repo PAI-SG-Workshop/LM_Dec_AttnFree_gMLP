@@ -1,0 +1,59 @@
+{
+ "model": "gmlp",
+ "repo": "LM_2021_G-mlp-pytorch",
+ "target_repo": "LM_Dec_AttnFree_gMLP",
+ "category": "AttnFree",
+ "upstream": "lucidrains/g-mlp-pytorch (MIT)",
+ "unified": [
+  "seq_len built at 2048 so LM-05 can test up to 2048; trained on 512"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "scaling",
+ "started": "2026-10-19 14:36:13",
+ "smoke": false,
+ "rows": [
+  {
+   "len": 512,
+   "train": {
+    "peak_mb": 116.6,
+    "ms": 12.0
+   },
+   "infer": {
+    "peak_mb": 27.8,
+    "ms": 5.0
+   }
+  },
+  {
+   "len": 1024,
+   "train": {
+    "peak_mb": 181.1,
+    "ms": 13.0
+   },
+   "infer": {
+    "peak_mb": 42.0,
+    "ms": 5.0
+   }
+  },
+  {
+   "len": 2048,
+   "train": {
+    "peak_mb": 389.2,
+    "ms": 18.9
+   },
+   "infer": {
+    "peak_mb": 81.0,
+    "ms": 7.0
+   }
+  },
+  {
+   "len": 4096,
+   "note": "not supported (model built for <= 2048)"
+  },
+  {
+   "len": 8192,
+   "note": "not supported (model built for <= 2048)"
+  }
+ ],
+ "seconds": 2.6
+}

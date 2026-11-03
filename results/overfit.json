@@ -1,0 +1,23 @@
+{
+ "model": "gmlp",
+ "repo": "LM_2021_G-mlp-pytorch",
+ "target_repo": "LM_Dec_AttnFree_gMLP",
+ "category": "AttnFree",
+ "upstream": "lucidrains/g-mlp-pytorch (MIT)",
+ "unified": [
+  "seq_len built at 2048 so LM-05 can test up to 2048; trained on 512"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "overfit",
+ "started": "2026-10-19 15:15:00",
+ "smoke": false,
+ "first_ce": 5.769103527069092,
+ "last_ce": 0.001392969861626625,
+ "passed": true,
+ "pass_loss": 0.5,
+ "steps": 400,
+ "seconds": 9.9,
+ "lr": 0.001,
+ "note": "overfit uses Adam 1e-3 on 4 x 256 bytes; only an implementation check"
+}
